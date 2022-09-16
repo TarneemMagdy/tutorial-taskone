@@ -1,8 +1,8 @@
- <div class="container">
+ <!-- <div class="container">
   <input type="text"[(ngModel)]="searchValue" >
-  <br>
-  <mat-paginator [length]="length" [pageSize]="pageSize" (page)="onPageChange($event)">
-  </mat-paginator>
+  <br>   -->
+  <!-- <mat-paginator [length]="length" [pageSize]="pageSize" (page)="onPageChange($event)">
+  </mat-paginator> -->
 
   <!-- <h3>{{childMsg}}</h3> -->
   <!-- <div class="card-group">
@@ -23,26 +23,26 @@
 
      </div> -->
 
- </div>
+ <!-- </div>
 
 
 
 
+ -->
 
 
 
-<div class="container">
   <!-- <input type="search" placeholder="search here" [(ngModel)]=" searchValue"> -->
 
-  <div class="row ">
+  <!-- <div class="row ">
     <div class="col-3" *ngFor="let singleMovie of filterMovies ">
       <div class="card ">
         <a [routerLink]="['/movies',singleMovie.id]"><img class="card-img-top" [src]= '"https://image.tmdb.org/t/p/w500"+singleMovie.poster_path' alt="Card image" style="width:100%"></a>
          <div class="card-body">
 
-          <h4 class="card-title"> {{singleMovie.title}}</h4>
+          <h4 class="card-title"> {{singleMovie.title}}</h4> -->
             <!-- <app-movie-rating [rating]="singleMovie.rating"></app-movie-rating>   -->
-          <p class="card-text" *ngIf="singleMovie.isVisiable"> {{singleMovie.overview}}</p>
+          <!-- <p class="card-text" *ngIf="singleMovie.isVisiable"> {{singleMovie.overview}}</p>
 
           <br>
 
@@ -52,4 +52,55 @@
     </div>
 
   </div>
+</div> -->
+
+
+<div class="container">
+
+
+
+
+  <input type="search" placeholder="search here" [(ngModel)]=" searchValue">
+
+  <div class="row ">
+    <div class="col-3" *ngFor="let singleMovie of filterMovies ">
+      <div class="card ">
+        <!-- <img class="card-img-top" [src]= '"https://image.tmdb.org/t/p/w500"+singleMovie.poster_path' alt="Card image" style="width:100%"> -->
+        <div class="card-body">
+
+          <h4 class="card-title"> {{singleMovie.title}}</h4>
+          <!-- <app-movie-rating [rating]="singleMovie.rating"></app-movie-rating> -->
+          <p class="card-text" *ngIf="singleMovie.isVisiable"> {{singleMovie.overview}}</p>
+
+          <br>
+
+          <!-- <button href="#" class="btn btn-primary" (click)="toggleDate(singleMovie.id)"> {{singleMovie.isVisiable? 'Hide':'Show'}} Details</button> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+ <!-- <div class="container">
+  <input type="search" placeholder="search here" [(ngModel)]="searchValue">
+<div class="row">
+    <div class="col-3" *ngFor="let singleMovie of filterMovies ">
+      <div class="card ">
+         <img class="card-img-top" [src]= '"https://image.tmdb.org/t/p/w500"+singleMovie.poster_path' alt="Card image" style="width:100%">
+          <div class="card-body">
+
+          <h4 class="card-title"> {{singleMovie.title}}</h4>
+
+          <p class="card-text" *ngIf="singleMovie.isVisiable"> {{singleMovie.overview}}</p>
+
+          <br>
+
+           <button href="#" class="btn btn-primary" (click)="toggleDate(singleMovie.id)"> {{singleMovie.isVisiable? 'Hide':'Show'}} Details</button>
+    </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ -->
