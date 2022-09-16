@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card-group">
+    <div class="col-3">
+      <div class="card h-50">
+        <a href=""></a><img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w500'+singleMovie.poster_path"
+          alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{singleMovie.title}}</h4>
+          <p class="card-text" *ngIf="singleMovie. isVisiable">{{singleMovie.overview}} </p>
+
+          <br>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
